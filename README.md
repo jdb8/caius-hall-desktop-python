@@ -1,4 +1,4 @@
-caius-hall-desktop-python
+Caius Hall Desktop (python)
 =========================
 
-A desktop application for the Caius Hall booking system, in Python.
+A desktop application for the Caius Hall booking system, in Python. **Very much a work in progress.**
