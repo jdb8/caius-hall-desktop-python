@@ -170,6 +170,16 @@ class CaiusHall():
 
         An entry is added to the local hall_bookings dictionary, and then saved with
         save_local_bookings(). This has no effect on the server's bookings.
+
+        Args:
+            utc_date: the datetime.datetime object representing the utc time for the booking
+            type: a string of either 'first' or 'formal'
+            special_info: optional string - if the booking has additional information such
+                as 'celebrating the queen's jubilee' or 'early hall due to matriculation dinner'
+            vegetarian: optional boolean - defaults to false
+            requirements: optional string - any additional requirements such as 'Vegan please'
+                or 'I am allergic to <x>!' - to be used in the requirements box that the
+                kitchen sees
         """
         utc_date_string = utc_date.strftime('%Y-%m-%d %H:%M')
 
@@ -198,6 +208,10 @@ class CaiusHall():
         Cancels (deletes) a local hall booking and saves the data to disk.
 
         This has no effect on the server's bookings.
+
+        Args:
+            utc_date: the datetime.datetime object representing the utc time for the booking
+                that is to be cancelled
 
         Returns:
             A boolean value. True if an entry was found and deleted for the specified date,
